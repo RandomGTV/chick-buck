@@ -1,0 +1,62 @@
+:root{--surface:#fffaf2;--line:#e6dacb;--accent:#be1324;--theme-text:#2e1314;color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark;--cream:#171112;--dark:#fff3df;--muted:#c4aba2;--surface:#251a1b;--line:#493034;--accent:#ff6670;--theme-text:#fff3df}
+body,.header,.product,dialog{transition:background-color .35s,color .35s,border-color .35s}
+.header{border-color:var(--line)}.product{background:var(--surface);border-color:var(--line)}
+[data-theme=dark] h2 span,[data-theme=dark] .red,[data-theme=dark] .header .brand,[data-theme=dark] .header nav a:hover,[data-theme=dark] .nav-location:hover{color:var(--accent)}
+[data-theme=dark] .category-tabs button{border-color:var(--line)}[data-theme=dark] .category-tabs .active{background:var(--red);border-color:var(--red)}
+[data-theme=dark] .product .food-image{mix-blend-mode:normal;border-radius:7px;margin:9px 9px 15px;background-color:#fff8ec}
+[data-theme=dark] .product-bottom button{color:#ff8d95;border-color:#ca5660;background:#301c20}
+[data-theme=dark] .product-bottom button:hover{background:var(--red);color:white}
+[data-theme=dark] .product-price{color:#ffdb55}[data-theme=dark] .close-button{background:#453033}
+[data-theme=dark] .yellow-badge{color:#35100d}
+[data-theme=dark] .dialog-header,[data-theme=dark] .bag-item{border-color:var(--line)}
+[data-theme=dark] .story-poster{color:#a20b1d}[data-theme=dark] .story-poster p span{color:#35100d}
+[data-theme=dark] .hero,[data-theme=dark] .deal-inner,[data-theme=dark] .find-banner{color:#fff4e3}
+[data-theme=dark] .hero{background:#41060b}[data-theme=dark] .hero-art:after{background:linear-gradient(90deg,#41060b,transparent 35%)}
+[data-theme=dark] .cream{background:#fff4e3}[data-theme=dark] footer .brand{color:#fff4e3}
+[data-theme=dark] .toast{background:#fff0db;color:#2e1314}
+.theme-switch{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);padding:9px 12px;border-radius:30px;color:var(--theme-text);font-size:11px;font-weight:700;white-space:nowrap;min-height:38px;transition:background .3s,transform .2s}
+.theme-switch:hover{transform:translateY(-2px)}.theme-switch svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7}
+.header-actions{gap:18px}.header nav{gap:23px}
+.hero{isolation:isolate}.hero-art{overflow:hidden}.hero-art img{transform:scale(1.035);animation:chicken-breathe 12s ease-in-out infinite;will-change:transform}
+#steam{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;mix-blend-mode:screen}
+.heat-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 54% 25%,#ff9b241a,transparent 50%);mix-blend-mode:screen;animation:oven-glow 6s ease-in-out infinite}
+.hero-copy>.eyebrow{animation:enter-up .65s both}.hero h1{animation:enter-up .8s .1s both}.hero-description{animation:enter-up .8s .22s both}.hero-buttons{animation:enter-up .8s .34s both}
+.hero h1 em{position:relative}.hero h1 em:after{content:'';position:absolute;left:3%;bottom:-6px;width:87%;height:4px;background:var(--yellow);border-radius:50%;transform:rotate(-2deg) scaleX(0);transform-origin:left;animation:underline-in .65s .8s forwards}
+.hero-stamp{animation:stamp-rock 6s ease-in-out infinite}.hero-bottom{z-index:4;align-items:center;gap:15px}.hero-bottom>span{margin-left:auto}.effects-toggle{display:flex;align-items:center;gap:7px;border:1px solid #ffecbe66;background:#470b11a8;color:#ffe7d0;border-radius:30px;padding:7px 11px;font-size:9px;letter-spacing:.4px;min-height:30px}.effects-toggle:hover{background:#6c0d18}
+.ticker{height:46px;color:#2e1314}.ticker-track{display:flex;flex:none;animation:craving-scroll 32s linear infinite;width:max-content}.ticker-track>div{flex:none;white-space:nowrap}.ticker:hover .ticker-track{animation-play-state:paused}
+.product{transition:transform .25s,box-shadow .25s,background .35s;animation:menu-pop .45s both}.product:nth-child(2){animation-delay:.06s}.product:nth-child(3){animation-delay:.12s}.product:nth-child(4){animation-delay:.18s}.product:hover{transform:translateY(-7px);box-shadow:0 16px 30px #6c0d1818}.product .food-image{transition:transform .5s}.product:hover .food-image{transform:scale(1.035)}
+.product-bottom button:active{transform:scale(.85)}.button{position:relative;overflow:hidden}.button:after{content:'';position:absolute;inset:-100% auto -100% -50%;width:25%;background:#ffffff55;transform:rotate(25deg);transition:left .5s}.button:hover:after{left:140%}.button span{transition:transform .2s}.button:hover span{transform:translate(3px,-2px)}
+.reveal-ready{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal-ready.in-view{opacity:1;transform:translateY(0)}
+.bag-pop{animation:bag-pop .4s}.effects-paused *, .effects-paused *:before,.effects-paused *:after{animation-play-state:paused!important}.effects-paused .reveal-ready{opacity:1;transform:none}
+.effects-paused .hero-copy>.eyebrow,.effects-paused .hero h1,.effects-paused .hero-description,.effects-paused .hero-buttons,.effects-paused .product{animation:none!important}.effects-paused .hero h1 em:after{transform:rotate(-2deg) scaleX(1)}
+@keyframes chicken-breathe{0%,100%{transform:scale(1.035) translateY(0)}50%{transform:scale(1.065) translateY(-4px)}}
+@keyframes oven-glow{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes enter-up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes underline-in{to{transform:rotate(-2deg) scaleX(1)}}
+@keyframes stamp-rock{0%,100%{transform:rotate(13deg)}50%{transform:rotate(6deg)}}
+@keyframes craving-scroll{to{transform:translateX(-50%)}}
+@keyframes menu-pop{from{opacity:0;translate:0 13px}to{opacity:1;translate:0 0}}
+@keyframes bag-pop{50%{transform:rotate(-12deg) scale(1.18)}}
+@media(max-width:1100px){.header nav{gap:16px}.header-actions{gap:14px}.theme-switch{padding:9px}.header-order{gap:17px}.header{padding:0 3%}}
+@media(max-width:900px) and (min-width:781px){.theme-label{display:none}.header nav{gap:12px}.header-order{padding:13px;font-size:11px}.header-actions{gap:12px}}
+@media(max-width:780px){.header{padding:0 5%}.header-actions{gap:14px}.theme-label{display:none}.theme-switch{padding:10px}.hero-bottom{font-size:7px;letter-spacing:1px}.hero-bottom>span{display:none}.effects-toggle{font-size:8px;padding:6px 9px}.hero h1 em:after{bottom:-4px;height:3px}[data-theme=dark] .hero-art:after{background:linear-gradient(180deg,#41060b,transparent 32%),linear-gradient(90deg,#41060b88,transparent 28%)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hero-art img{transform:none;will-change:auto}.hero h1 em:after{transform:scaleX(1)}.reveal-ready{opacity:1;transform:none}.product:hover{transform:none}#steam,.heat-glow{display:none}.ticker-track{transform:none}}
+/* Keep the complete food photograph in its natural landscape proportions on phones. */
+@media(max-width:780px){
+  .hero{display:flex;flex-direction:column;height:auto;min-height:0;background:#78090e}
+  .hero-copy{order:1;width:100%;max-width:620px;margin:0 auto;padding:30px 6% 12px}
+  .hero h1{font-size:clamp(58px,16vw,88px);line-height:.93;margin-top:16px}
+  .hero h1 em{display:inline-block;font-size:1.05em;line-height:.95;margin-left:8px;letter-spacing:-1px}
+  .hero-description{margin-top:19px;line-height:1.6}
+  .hero-buttons{gap:22px;margin-top:19px;flex-wrap:wrap}
+  .hero-buttons .button{padding:16px 18px;font-size:12px;gap:20px}
+  .hero-buttons .text-link{font-size:11px;gap:10px}
+  .hero-art{order:2;position:relative;inset:auto;align-self:center;width:100%;max-width:620px;aspect-ratio:3/2;height:auto;margin:0}
+  .hero-art img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:center;animation:none;transform:none;will-change:auto}
+  .hero-art:after{background:linear-gradient(180deg,#78090e 0%,transparent 13%,transparent 88%,#78090e 100%);pointer-events:none;z-index:2}
+  .hero-stamp{display:none}
+  .hero-bottom{order:3;position:relative;inset:auto;padding:8px 6% 17px;font-size:7px;letter-spacing:.7px;gap:10px}
+  [data-theme=dark] .hero{background:#41060b}
+  [data-theme=dark] .hero-art:after{background:linear-gradient(180deg,#41060b 0%,transparent 16%,transparent 85%,#41060b 100%)}
+}
